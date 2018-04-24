@@ -18,12 +18,12 @@ class Image2D(object):
         :param p2:
         :return: if pixel p1 and p2 is four-connected
         """
-        if self.pixel(p1[0], p1[1]) ==  self.pixel(p2[0], p2[1]):
+        if self.pixel(p1[0], p1[1]) == self.pixel(p2[0], p2[1]):
             return 1 == fabs(p1[0] - p2[0]) + fabs(p1[1] - p2[1])
         return False
 
     def pixel(self, x, y):
-        if x >= 0 and y >= 0 and x < self.data.shape[0] and y < self.data.shape[1]:
+        if 0 <= x < self.data.shape[0] and 0 <= y < self.data.shape[1]:
             return self.data[x][y]
 
     def is8Connected(self, p1, p2):
