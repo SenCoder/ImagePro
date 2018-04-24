@@ -14,9 +14,9 @@ class Image2D(object):
     def is4Connected(self, p1, p2):
         """
 
-        :param p1:
+        :param p1: position if p1, eg. (x, y)
         :param p2:
-        :return:
+        :return: if pixel p1 and p2 is four-connected
         """
         if self.pixel(p1[0], p1[1]) ==  self.pixel(p2[0], p2[1]):
             return 1 == fabs(p1[0] - p2[0]) + fabs(p1[1] - p2[1])
